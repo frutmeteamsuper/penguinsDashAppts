@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Tu frutería a domicilio">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="busak">
+  <link rel="apple-touch-startup-image" href="assets/splash/launch-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="assets/splash/launch-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="assets/splash/launch-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="assets/splash/launch-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="assets/splash/launch-1536x2048.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="assets/splash/launch-1668x2224.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="assets/splash/launch-2048x2732.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#6F6F6F">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#fafafa">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta charset="utf-8">
+  <base href="/">
+  <title>penguinsdash!</title>
+
+ <!--============== INICIO HEADER penguinsdash  ============================= -->
+<!--  <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">  -->
+<link rel="stylesheet" href="assets/assetsbit/vendor/chartist/css/chartist.min.css">
+    <link href="assets/assetsbit/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+        <link href="assets/assetsbit/vendor/fullcalendar/css/main.min.css" rel="stylesheet">
+    <link href="assets/assetsbit/css/style.css" rel="stylesheet">
+
+<!--============== FIN HEADER penguinsdash  ============================= -->
+
+  </head>
+
+
+      <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+
+  <body >  
+    <!-- LOADER -->
+  <div id="main-wrapper">
+
+  <app-root></app-root>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+
+
+  </div>
+<!--============== INICIO JS penguinsdash  ============================= -->
+    <script src="assets/assetsbit/vendor/global/global.min.js"></script>
+	<script src="assets/assetsbit/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="assets/assetsbit/vendor/chart.js/Chart.bundle.min.js"></script>
+	
+	<!-- Chart piety plugin files -->
+<!--     <script src="assets/assetsbit/vendor/peity/jquery.peity.min.js"></script>
+	 -->
+	<!-- Apex Chart -->
+<!-- 	<script src="assets/assetsbit/vendor/apexchart/apexchart.js"></script> -->
+	
+	<!-- Dashboard 1 -->
+	<!-- <script src="assets/assetsbit/js/dashboard/dashboard-1.js"></script> -->
+	
+    <script src="assets/assetsbit/vendor/moment/moment.min.js"></script>
+
+    <script src="assets/assetsbit/vendor/fullcalendar/js/main.min.js"></script>
+  
+    <script src="assets/assetsbit/js/custom.min.js"></script>
+	<script src="assets/assetsbit/js/deznav-init.js"></script>
+	<script src="assets/assetsbit/js/demo.js"></script>
+    <!-- <script src="assets/assetsbit/js/styleSwitcher.js"></script> -->
+    <!-- <script src="https://unpkg.com/ionicons@5.5.1/dist/ionicons.js"></script> -->
+ <!-- <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script> -->
+
+<!--============== FIN JS penguinsdash  ============================= -->
+
+</body>
+</html>
+  <script>
+
+  
+  
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+    /* initialize the external events
+    -----------------------------------------------------------------*/
+
+    var containerEl = document.getElementById('external-events');
+    new FullCalendar.Draggable(containerEl, {
+      itemSelector: '.external-event',
+      eventData: function(eventEl) {
+      return {
+        title: eventEl.innerText.trim()
+      }
+      }
+     
+    });
+
+    //// the individual way to do it
+    // var containerEl = document.getElementById('external-events-list');
+    // var eventEls = Array.prototype.slice.call(
+    //   containerEl.querySelectorAll('.fc-event')
+    // );
+    // eventEls.forEach(function(eventEl) {
+    //   new FullCalendar.Draggable(eventEl, {
+    //     eventData: {
+    //       title: eventEl.innerText.trim(),
+    //     }
+    //   });
+    // });
+
+    /* initialize the calendar
+    -----------------------------------------------------------------*/
+
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      headerToolbar: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      },
+      
+      selectable: true,
+      selectMirror: true,
+      select: function(arg) {
+      var title = prompt('Event Title:');
+      if (title) {
+        calendar.addEvent({
+        title: title,
+        start: arg.start,
+        end: arg.end,
+        allDay: arg.allDay
+        })
+      }
+      calendar.unselect()
+      },
+      
+      editable: true,
+      droppable: true, // this allows things to be dropped onto the calendar
+      drop: function(arg) {
+      // is the "remove after drop" checkbox checked?
+      if (document.getElementById('drop-remove').checked) {
+        // if so, remove the element from the "Draggable Events" list
+        arg.draggedEl.parentNode.removeChild(arg.draggedEl);
+      }
+      },
+    //   let url ='https://db.penguinscleaning.ca:3022/api/order';
+    // fetch (url)
+    //  .then(response => response.json())
+    //  .then(data => console.log(data.length))
+    //  .then(error => console.log(error))
+      initialDate: '2021-06-01',
+        weekNumbers: true,
+        navLinks: true, // can click day/week names to navigate views
+        editable: true,
+        selectable: true,
+        nowIndicator: true,
+       events: [
+        {
+          title: 'H medium',
+          start: '2021-06-01',
+            className:"bg-primary"
+        },
+        {
+          title: 'H basic',
+          start: '2021-06-11',
+            className:"bg-primary"
+        },
+        {
+          title: 'H medium',
+          start: '2021-06-14',
+            className:"bg-primary"
+        },
+        {
+          title: 'H premium',
+          start: '2021-06-27',
+            className:"bg-primary"
+        }
+        // {
+        //   title: 'Long Event',
+        //   start: '2021-02-07',
+        //   end: '2021-02-10',
+        //   className: "bg-danger"
+        // },
+        // {
+        //   groupId: 999,
+        //   title: 'Repeating Event',
+        //   start: '2021-02-09T16:00:00'
+        // },
+        // {
+        //   groupId: 999,
+        //   title: 'Repeating Event',
+        //   start: '2021-02-16T16:00:00'
+        // },
+        // {
+        //   title: 'Conference',
+        //   start: '2021-02-11',
+        //   end: '2021-02-13',
+        //   className: "bg-danger"
+        // },
+        // {
+        //   title: 'Meeting',
+        //   start: '2021-02-12T10:30:00',
+        //   end: '2021-02-12T12:30:00',
+        //   className:"bg-info"
+        // },
+        // {
+        //   title: 'Lunch',
+        //   start: '2021-02-12T12:00:00'
+        // },
+        // {
+        //   title: 'Meeting',
+        //   start: '2021-04-12T14:30:00'
+        // },
+        // {
+        //   title: 'Happy Hour',
+        //   start: '2021-07-12T17:30:00'
+        // },
+        // {
+        //   title: 'Dinner',
+        //   start: '2021-02-12T20:00:00',
+        //   className: "bg-warning"
+        // },
+        // {
+        //   title: 'Birthday Party',
+        //   start: '2021-02-13T07:00:00',
+        //   className: "bg-secondary"
+        // },
+        // {
+        //   title: 'Click for Google',
+        //   url: 'http://google.com/',
+        //   start: '2021-02-28'
+        // }
+        ]
+    });
+    calendar.render();
+
+    });
+  </script>
